@@ -9,6 +9,9 @@
 @mixin color-background telegram;
 @mixin color-border telegram;
 @mixin color-text telegram;
+@mixin color-background telegram-accent;
+@mixin color-border telegram-accent;
+@mixin color-text telegram-accent;
 
 .fade{opacity: 0.43}
 
@@ -19,12 +22,11 @@
       .status-bar{
         height: 2.5rem;
         padding: 0.6rem 0.6rem;
-        background-color: $telegram-accent;
-        color: color(white a(87%));
         .gb{font-size: 1.4rem}
         time{
           padding-top: 0.1rem;
           padding-left: 0.6rem;
+          font-weight: 500;
           font-size: 1.2rem}
         .right{
           padding-left: 0.3rem;
@@ -33,6 +35,23 @@
           padding-right: 0.3rem;
           float: left}
         }
+      .app{
+        height: 49.5rem;
+        position: relative;
+        .navbar{
+          box-shadow: 0 0.4rem 0.7rem -0.2rem rgba(0,0,0,.16);
+          .user-name{
+            font-size: 1.6rem;
+            text-transform: capitalize}
+          .user-last-seen{
+            opacity: .73;
+            font-size: 1.2rem;
+            font-weight: 300}
+          .user-avatar{
+            display: block;
+            size: 4rem}
+        }
+      }
       .nav-bar{
         height: 4.8rem;
         padding: 0.6rem;
