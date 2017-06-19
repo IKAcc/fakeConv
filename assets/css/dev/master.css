@@ -10,7 +10,7 @@
 @mixin color-border telegram;
 @mixin color-text telegram;
 
-
+.fade{opacity: 0.43}
 
 .preview-nexus5{
   .marvel-device{
@@ -18,14 +18,19 @@
     .screen{
       .status-bar{
         height: 2.5rem;
-        padding: 0.6rem;
-        .gb{font-size: 1.2rem}
-        time{font-size: 1.2rem}
-        .right{
+        padding: 0.6rem 0.6rem;
+        background-color: $telegram-accent;
+        color: color(white a(87%));
+        .gb{font-size: 1.4rem}
+        time{
+          padding-top: 0.1rem;
           padding-left: 0.6rem;
+          font-size: 1.2rem}
+        .right{
+          padding-left: 0.3rem;
           float: right}
         .left{
-          padding-right: 0.6rem;
+          padding-right: 0.3rem;
           float: left}
         }
       .nav-bar{
