@@ -39,7 +39,11 @@
         height: 49.5rem;
         position: relative;
         .navbar{
+          position: absolute;
+          top: 0; right: 0;
+          width: 100%;
           box-shadow: 0 0.4rem 0.7rem -0.2rem rgba(0,0,0,.16);
+          z-index: 1;
           .user-name{
             font-size: 1.6rem;
             text-transform: capitalize}
@@ -51,6 +55,12 @@
             display: block;
             size: 4rem}
         }
+        .body{
+          position: absolute;
+          top: 0; right: 0;
+          size: 100%;
+          overflow: hidden;
+          background-color: #ccd6df}
       }
       .nav-bar{
         height: 4.8rem;
