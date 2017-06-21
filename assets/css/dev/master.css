@@ -13,6 +13,15 @@
 @mixin color-border telegram-accent;
 @mixin color-text telegram-accent;
 
+@font-face{
+  font-family: 'Noto';
+  font-weight: 400;
+  src: url('$path/Noto/NotoNaskhArabicUI-Regular.ttf') format('truetype')}
+@font-face{
+  font-family: 'Noto';
+  font-weight: 600;
+  src: url('$path/Noto/NotoNaskhArabicUI-Bold.ttf') format('truetype')}
+
 .fade{opacity: 0.43}
 
 .preview-nexus5{
@@ -59,8 +68,25 @@
           position: absolute;
           top: 0; right: 0;
           size: 100%;
+          padding: * 1.2rem 5.5rem;
           overflow: hidden;
-          background-color: #ccd6df}
+          background-color: #ccd6df;
+          .massage{
+            p{
+              display: inline-block;
+              max-width: 80%;
+              padding: 1rem;
+              font-family: 'Noto';
+              line-height: 1;
+              box-shadow: -1px -1px 2px 0px rgba(194,194,194,0.8);
+              .massage-text{
+                color: black;
+
+              }
+            }
+          }
+
+        }
         .input{
           position: absolute;
           bottom: 0; right: 0;
