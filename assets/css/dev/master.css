@@ -33,9 +33,7 @@
         padding: 0.6rem 0.6rem;
         .gb{font-size: 1.4rem}
         time{
-          padding-top: 0.1rem;
           padding-left: 0.6rem;
-          font-weight: 500;
           font-size: 1.2rem}
         .right{
           padding-left: 0.3rem;
@@ -70,25 +68,66 @@
           size: 100%;
           overflow: hidden;
           background-color: #ccd6df;
-          .massage-wrapper{
+          .message-wrapper{
             position: absolute;
             bottom: 0;
             width: 100%;
-            padding-bottom: 5.5rem;
-          }
-          .massage{
-            padding: 0.2rem 1.2rem;
-            p{
-              display: inline-block;
-              max-width: 80%;
-              padding: 1rem;
-              font-family: 'Roboto', 'Noto';
-              line-height: 1;
-              box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.2);
-              .massage-text{color: black}
+            padding-bottom: 5.8rem;
+            .message-group{
+              padding: 0.2rem 0;
+              .message{
+                position: relative;
+                padding: 0.2rem 1.2rem;
+                &.text{
+                  p{
+                    display: inline-block;
+                    max-width: 80%;
+                    padding: 1rem;
+                    font-family: 'Roboto', 'Noto';
+                    line-height: 1.1;
+                    box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.1);
+                    .message-content{color: black}
+                  }
+                }
+                &:after{
+                  content: '';
+                  position: absolute;
+                  bottom:  0.2rem;
+                  size: 0;
+                  box-shadow: 0 0.4rem 0.7rem -0.2rem rgba(0,0,0,.16)}
+              }
+              &.me{
+                .message{
+                  &.text{
+                    text-align: right;
+                    p{background-color: #efffde}
+                  }
+                  &:last-of-type{
+                    p{border-bottom-right-radius: 0}
+                    &:after{
+                      border-bottom: 0.8rem solid #efffde;
+                      border-right: 0.8rem solid transparent;
+                      right: 0.6rem}
+                  }
+                }
+              }
+              &.them{
+                .message{
+                  &.text{
+                    text-align: left;
+                    p{background-color: white}
+                  }
+                  &:last-of-type{
+                    p{border-bottom-left-radius: 0}
+                    &:after{
+                      border-bottom: 0.8rem solid white;
+                      border-left: 0.8rem solid transparent;
+                      left: 0.6rem}
+                  }
+                }
+              }
             }
           }
-
         }
         .input{
           position: absolute;
