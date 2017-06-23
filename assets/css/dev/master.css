@@ -24,6 +24,17 @@
 
 .fade{opacity: 0.43}
 
+.clearfix{
+  display: inline-block;
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+    clear: both}
+}
+
 .preview-nexus5{
   .marvel-device{
     box-shadow: -0.5rem -0.5rem 2.5rem rgba(14,21,47,.4);
@@ -82,11 +93,23 @@
                   p{
                     display: inline-block;
                     max-width: 80%;
-                    padding: 1rem;
+                    padding: 0.8rem 1rem;
                     font-family: 'Roboto', 'Noto';
                     line-height: 1.1;
                     box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.1);
-                    .message-content{color: black}
+                    .message-content{
+                      float: left;
+                      direction:  ltr;
+                      margin-bottom: -0.25rem;
+                      color: black}
+                    .message-meta{
+                      float: right;
+                      direction: ltr;
+                      margin: 0.5rem -0.3rem -1rem 0;
+                      padding: 0.2rem 0 0.3rem 1rem;
+                      font-size: 1rem;
+                      .gb{font-size: 1.4rem}
+                    }
                   }
                 }
                 &:after{
@@ -100,7 +123,10 @@
                 .message{
                   &.text{
                     text-align: right;
-                    p{background-color: #efffde}
+                    p{
+                      background-color: #efffde;
+                      .message-meta{color: #8fcb81}
+                    }
                   }
                   &:last-of-type{
                     p{border-bottom-right-radius: 0}
@@ -115,7 +141,10 @@
                 .message{
                   &.text{
                     text-align: left;
-                    p{background-color: white}
+                    p{
+                      background-color: white;
+                      .message-meta{color: #d4d7db}
+                    }
                   }
                   &:last-of-type{
                     p{border-bottom-left-radius: 0}
