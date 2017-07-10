@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style src="./assets/style.pcss"></style>
+<style src="./assets/postcss/style.pcss"></style>
 <style scoped>
   #app{
     min-height: 100vh;
