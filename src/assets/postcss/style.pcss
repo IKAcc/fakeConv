@@ -3,3 +3,23 @@
 
 @import "_vars.pcss";
 @import "_mixins.pcss";
+
+@font-face{
+  font-family: 'Noto';
+  font-weight: 400;
+  src: url('../fonts/Noto/NotoNaskhArabicUI-Regular.ttf') format('truetype')}
+@font-face{
+  font-family: 'Noto';
+  font-weight: 600;
+  src: url('../fonts/Noto/NotoNaskhArabicUI-Bold.ttf') format('truetype')}
+
+.fade{opacity: 0.43}
+
+.clearfix{display: inline-block}
+.clearfix:after{
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+  clear: both}
