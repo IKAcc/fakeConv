@@ -39,7 +39,8 @@ export default {
     box-sizing: content-box;
     padding: 5rem 1.5rem;
     background: $nexus5BackColor;
-    border-radius: 2rem}
+    border-radius: 2rem;
+    box-shadow: 2rem 3rem 8rem -2rem color($black a(53%))}
   .nexus5:before{
     content: '';
     position: absolute;
