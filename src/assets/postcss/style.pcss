@@ -1,0 +1,32 @@
+@import "../joqd/joqd.css";
+@import "../gorbeh/gorbeh-icons.css";
+
+@import "_vars.pcss";
+@import "_mixins.pcss";
+
+@font-face{
+  font-family: 'Noto';
+  font-weight: 400;
+  src: url('../fonts/Noto/NotoNaskhArabicUI-Regular.ttf') format('truetype')}
+@font-face{
+  font-family: 'Noto';
+  font-weight: 600;
+  src: url('../fonts/Noto/NotoNaskhArabicUI-Bold.ttf') format('truetype')}
+
+@mixin color-background telegram;
+@mixin color-background telegram-accent;
+@mixin color-border telegram;
+@mixin color-border telegram-accent;
+@mixin color-text telegram;
+@mixin color-text telegram-accent;
+
+.fade{opacity: 0.43}
+
+.clearfix{display: inline-block}
+.clearfix:after{
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+  clear: both}
