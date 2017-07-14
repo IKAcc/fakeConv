@@ -1,11 +1,15 @@
 <template>
-  <div class="marvel-device nexus5">
+  <div class="nexus5">
     <topbar></topbar>
     <volume></volume>
     <sleep></sleep>
     <camera></camera> 
     <sensor></sensor>
-    <screen></screen>
+    <screen>
+      <application>
+        <slot></slot>
+      </application>
+    </screen>
   </div>
 </template>
 <script>
@@ -16,10 +20,11 @@ import sleep from '@/components/atoms/device-sleep'
 import camera from '@/components/atoms/device-camera'
 import sensor from '@/components/atoms/device-sensor'
 import screen from '@/components/atoms/device-screen'
+import application from '@/components/organisms/application'
 
 export default {
   name: 'nexus5',
-  components: {topbar, volume, sleep, camera, sensor, screen}
+  components: {topbar, volume, sleep, camera, sensor, screen, application}
 }
 </script>
 <style lang="postcss">
