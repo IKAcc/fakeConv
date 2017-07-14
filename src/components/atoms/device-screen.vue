@@ -30,7 +30,6 @@ export default {
     size: 100%;
 		z-index: 2;
     border-radius: 0.1rem;
-    color: white;
     background-color: color($nexus5FrontColor whiteness(5%));
     box-shadow: inset 0 0 0.5rem 0 color($black a(25%))}
         

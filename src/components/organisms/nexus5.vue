@@ -6,7 +6,7 @@
     <camera></camera> 
     <sensor></sensor>
     <screen :statusbarColor="'telegram-accent'">
-      <application :ui="'telegram'">
+      <application :ui="'telegram'" :messages="messages">
         <slot></slot>
       </application>
     </screen>
@@ -24,7 +24,16 @@ import application from '@/components/organisms/application'
 
 export default {
   name: 'nexus5',
-  components: {topbar, volume, sleep, camera, sensor, screen, application}
+  components: {topbar, volume, sleep, camera, sensor, screen, application},
+  props: {
+    ui: {
+      type: String,
+      default: 'telegram'},
+    messages: {
+      type: Array,
+      default: []
+    }
+  }
 }
 </script>
 <style lang="postcss">

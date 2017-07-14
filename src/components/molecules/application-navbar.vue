@@ -1,5 +1,5 @@
 <template>
-  <div v-if="app.toLowerCase() === 'telegram'" class="navbar telegram" dir="ltr">
+  <div v-if="app.toLowerCase() === 'telegram'" class="application-navbar telegram white-text" dir="ltr">
     <div class="row align-content-middle">
       <div class="all-2">
         <i class="gb gb_arrow_back gb_s24"></i>
@@ -36,20 +36,20 @@ export default {
 
   @import '../../assets/postcss/_vars.pcss';
   
-  .telegram .navbar{
+  .telegram .application-navbar{
     position: absolute;
     top: 0; right: 0;
     width: 100%;
     box-shadow: 0 0.4rem 0.7rem -0.2rem color($black a(16%));
     z-index: 1}
-  .telegram .navbar .user-name{
+  .telegram .application-navbar .user-name{
     font-size: 1.6rem;
     text-transform: capitalize}
-  .telegram .navbar .user-last-seen{
+  .telegram .application-navbar .user-last-seen{
     opacity: .73;
     font-size: 1.2rem;
     font-weight: 300}
-  .telegram .navbar .user-avatar{
+  .telegram .application-navbar .user-avatar{
     display: block;
     size: 4rem}
 

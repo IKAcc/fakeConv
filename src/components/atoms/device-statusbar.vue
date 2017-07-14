@@ -1,5 +1,5 @@
 <template>
-  <div class="device-statusbar" lang="en">
+  <div class="device-statusbar white-text" lang="en">
     <time class="time right">12:20</time>
     <i class="gb gb_battery_charging_full right"></i>
     <i class="gb gb_signal_cellular_null right fade"></i>
