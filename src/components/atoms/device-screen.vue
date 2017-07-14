@@ -1,6 +1,6 @@
 <template>
   <div class="device-screen">
-    <statusbar class="telegram-accent"></statusbar>
+    <statusbar :class="statusbarColor"></statusbar>
     <slot></slot>
     <navbar></navbar>
   </div>
@@ -12,10 +12,16 @@ import navbar from '@/components/atoms/device-navbar'
 
 export default {
   name: 'deviceScreen',
-  components: {statusbar, navbar}
+  components: {statusbar, navbar},
+  props: {
+    statusbarColor: {
+      type: String,
+      default: 'black'
+    }
+  }
 }
 </script>
-<style lang="postcss">
+<style lang="postcss" scoped>
 
   @import '../../assets/postcss/_vars.pcss';
   

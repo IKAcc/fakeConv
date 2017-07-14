@@ -6,7 +6,7 @@ export default {
   name: 'deviceSensor'
 }
 </script>
-<style lang="postcss">
+<style lang="postcss" scoped>
 
   @import '../../assets/postcss/_vars.pcss';
 
@@ -20,4 +20,5 @@ export default {
     z-index: 3;
     box-shadow: inset 0.2rem 0.1rem 0.2rem 0 color($black a(45%)),
                 inset -0.1rem -0.1rem 0.1rem 0 color($white a(18%))}
+
 </style>

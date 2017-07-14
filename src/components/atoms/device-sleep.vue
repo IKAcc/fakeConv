@@ -6,7 +6,7 @@ export default {
   name: 'deviceSleep'
 }
 </script>
-<style lang="postcss">
+<style lang="postcss" scoped>
 
   @import '../../assets/postcss/_vars.pcss';
 
@@ -15,4 +15,5 @@ export default {
     position: absolute;
     right: -0.3rem; top: 7rem;
     background: linear-gradient(to bottom, color($nexus5FrontColor  whiteness(45%)) 0%, $nexus5FrontColor 80%, $nexus5FrontColor 100%)}
+
 </style>

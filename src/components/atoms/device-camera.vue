@@ -6,7 +6,7 @@ export default {
   name: 'deviceCamera'
 }
 </script>
-<style lang="postcss">
+<style lang="postcss" scoped>
 
   @import '../../assets/postcss/_vars.pcss';
   

@@ -5,8 +5,8 @@
     <sleep></sleep>
     <camera></camera> 
     <sensor></sensor>
-    <screen>
-      <application>
+    <screen :statusbarColor="'telegram-accent'">
+      <application :ui="'telegram'">
         <slot></slot>
       </application>
     </screen>
