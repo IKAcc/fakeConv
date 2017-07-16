@@ -2,7 +2,7 @@
   <main class="container">
     <section class="row">
       <div class="desktop-4">
-        <nexus5 :ui="'telegeram'" :messages="messages"></nexus5>
+        <nexus5 :ui="'telegeram'" :messages="messages" :person="person"></nexus5>
       </div>
     </section>
   </main>
@@ -16,6 +16,11 @@ export default {
   components: {nexus5},
   data () {
     return {
+      person: {
+        name: 'Phil',
+        avatar: 'https://yt3.ggpht.com/-puD8gV2fteI/AAAAAAAAAAI/AAAAAAAAAAA/CBhipfaxKKE/s48-c-k-no-mo-rj-c0xffffff/photo.jpg',
+        status: '12:25 PM'
+      },
       messages: [
         {
           id: 0,

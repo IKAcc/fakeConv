@@ -1,8 +1,8 @@
 <template>
   <div :class="['application', ui.toLowerCase()]">
-    <application-navbar :app="ui"></application-navbar>
+    <application-navbar :app="ui" :person="person"></application-navbar>
     <application-body>
-      
+
       <message-group :class="messageGroup.from" v-for="messageGroup in messages" :key="messageGroup.id">
 
         <message-item :class="[messageGroup.from === 'me' ? 'align-right' : 'align-left']" v-for="message in messageGroup.items" :key="message.id">
@@ -44,6 +44,10 @@ export default {
     messages: {
       type: Array,
       default: []
+    },
+    person: {
+      type: Object,
+      default: null
     }
   }
 }
@@ -55,7 +59,7 @@ export default {
   .application{
     height: 49.5rem;
     position: relative}
-    
+
   .application.telegram{background-color: #ccd6df}
 
 </style>

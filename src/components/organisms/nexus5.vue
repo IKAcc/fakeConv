@@ -3,10 +3,10 @@
     <topbar></topbar>
     <volume></volume>
     <sleep></sleep>
-    <camera></camera> 
+    <camera></camera>
     <sensor></sensor>
     <screen :statusbarColor="'telegram-accent'">
-      <application :ui="'telegram'" :messages="messages">
+      <application :ui="'telegram'" :messages="messages" :person="person">
         <slot></slot>
       </application>
     </screen>
@@ -32,6 +32,10 @@ export default {
     messages: {
       type: Array,
       default: []
+    },
+    person: {
+      type: Object,
+      default: null
     }
   }
 }

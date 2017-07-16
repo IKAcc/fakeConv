@@ -7,11 +7,24 @@
       <div class="all-8 half-padding">
         <div class="row align-left">
           <div class="all-3 no-padding">
-            <img src="https://yt3.ggpht.com/-puD8gV2fteI/AAAAAAAAAAI/AAAAAAAAAAA/CBhipfaxKKE/s48-c-k-no-mo-rj-c0xffffff/photo.jpg" class="user-avatar circle-corner" alt="">
+            <img :src="`${person.avatar}`" class="user-avatar circle-corner" :alt="`${person.name}'s Avatar`">
           </div>
           <div class="all-9 no-padding align-middle">
-            <p class="user-name no-margin">Phil</p>
-            <p class="user-last-seen no-margin">last seen at 1:34 PM</p>
+            <p class="user-name no-margin">{{person.name}}</p>
+            <p class="user-status no-margin">
+              <template v-if="/(((0[1-9])|(1[0-2])):([0-5])(0|5)\s(A|P)M)/.test(person.status)">
+                last seen at {{person.status}}
+              </template>
+              <template v-else-if="person.status === 'blocked'">
+                last seen long time ago
+              </template>
+              <template v-else-if="person.status === 'typing'">
+                typeing ..
+              </template>
+              <template v-else>
+                {{person.status}}
+              </template>
+            </p>
           </div>
         </div>
       </div>
@@ -28,6 +41,10 @@ export default {
     app: {
       type: String,
       default: 'telegram'
+    },
+    person: {
+      type: Object,
+      default: null
     }
   }
 }
@@ -35,7 +52,7 @@ export default {
 <style lang="postcss" scoped>
 
   @import '../../assets/postcss/_vars.pcss';
-  
+
   .telegram .application-navbar{
     position: absolute;
     top: 0; right: 0;
@@ -45,7 +62,7 @@ export default {
   .telegram .application-navbar .user-name{
     font-size: 1.6rem;
     text-transform: capitalize}
-  .telegram .application-navbar .user-last-seen{
+  .telegram .application-navbar .user-status{
     opacity: .73;
     font-size: 1.2rem;
     font-weight: 300}
