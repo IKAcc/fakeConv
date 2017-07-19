@@ -1,8 +1,27 @@
 <template>
-  <main class="container">
-    <section class="row">
-      <div class="desktop-4">
-        <nexus5 :ui="'telegeram'" :messages="messages" :person="person"></nexus5>
+  <main style="min-height: 200vh">
+    <section class="telegram white-text">
+      <div class="container">
+        <div class="row">
+          <div class="desktop-7 desktop-offset-5">
+            <h2 class="half-margin">
+              <i class="gb gb_telegram gb_s36 white telegram-text circle-corner"></i>
+              <span>چت غیرواقعی (فیک) تلگرام</span>
+            </h2>
+            <p class="light-text">با ساخت یک چت غیرواقعی تلگرامی و گرفتن اسکرین‌شات، دوستای خودتون رو سر کار بزارین یا مدرک جعلی علیه کسی جمع کنین<small> (مسئولیت عواقبش پای خودتون)</small>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="desktop-5">
+            <div class="device-wrapper">
+              <nexus5 :ui="'telegram'" :messages="messages" :person="person"></nexus5>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -87,6 +106,17 @@ export default {
   }
 }
 </script>
-<style>
-  main{padding: 2.5rem 0}
+<style scoped>
+
+  @import '../../assets/postcss/_vars.pcss';
+
+  section.telegram{padding: 8rem *}
+  h2 .gb{
+    padding: 0.9rem 1.1rem 0.7rem 0.6rem;
+    margin-left: 1rem}
+  .device-wrapper{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding: 4.5rem 0}
 </style>
